@@ -759,3 +759,27 @@
     line-height: 49px;
     color: var(--secondary-color);
 }
+
+
+/*DASHBOARD NOTIFICATIONS PAGE CSS*/
+
+.dashboard-all-notifications-area {
+    margin-top: 40px;
+}
+
+.notification-page-item {
+    background: var(--default-white-color);
+    box-shadow: 8px 8px 48px 8px rgba(0, 0, 0, 0.08);
+    border: none;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.notification-page-item h4 {
+    margin-bottom: 10px;
+}
+
+.notification-page-item p {
+    margin-bottom: 5px;
+}

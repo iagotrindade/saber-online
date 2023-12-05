@@ -57,8 +57,8 @@ class AccountLoginNotification extends Notification
     public function toArray(object $notifiable): array
     {
         return [
-            'notification_title' => 'Novo acesso em sua conta',
-            'notification_body' => $this->accessDetails.'Caso não tenha sido você, altere sua senha imediatamente.'
+            'title' => 'Novo acesso em sua conta',
+            'body' => $this->accessDetails.'Caso não tenha sido você, altere sua senha imediatamente.'
         ];
     }
 }
