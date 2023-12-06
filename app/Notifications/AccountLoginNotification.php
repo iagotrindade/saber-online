@@ -58,7 +58,7 @@ class AccountLoginNotification extends Notification
     {
         return [
             'title' => 'Novo acesso em sua conta',
-            'body' => $this->accessDetails.'Caso não tenha sido você, altere sua senha imediatamente.'
+            'body' => $this->accessDetails.' Caso não tenha sido você, altere sua senha imediatamente.'
         ];
     }
 }

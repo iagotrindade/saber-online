@@ -14,12 +14,12 @@ use App\Models\PermissionGroups;
 class AuthHandler
 {
     public static function getAccessDetails($request) {
-        $location = Http::acceptJson()->get('https://ipinfo.io/'.$request->ip().'');
+        $location = Http::acceptJson()->get('http://ip-api.com/json/'.$request->ip().'');
 
-        if($location->json('error')) {
+        if($location->json('status') == 'fail') {
             $location = 'Localização do acesso Indeterminada.';
         } else {
-            $location  = 'Localização aproximada: '.$location->json('city').' - '.$location->json('region').' '.$location->json('country').' no dia '.date('d/m/Y \á\s\ H:m', strtotime(Carbon::now())).'';
+            $location  = 'Localização aproximada: '.$location->json('city').' - '.$location->json('regionName').' '.$location->json('countryCode').' no dia '.date('d/m/Y \á\s\ H:m', strtotime(Carbon::now())).'';
         }
 
         return $accessDetails = 'Acessado de um '.$request->header('sec-ch-ua-platform').', endereço IP '.$request->ip().'. '.$location.'';

@@ -762,22 +762,55 @@
 /*DASHBOARD NOTIFICATIONS PAGE CSS*/
 
 .dashboard-all-notifications-area {
-    margin-top: 40px;
+    margin-top: 30px;
+}
+
+.notifications-area {
+    align-items: flex-start;
 }
 
 .notification-page-item {
+    height: 148px;
     background: var(--default-white-color);
     box-shadow: 8px 8px 48px 8px rgba(0, 0, 0, 0.08);
     border: none;
     border-radius: 12px;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .notification-page-item h4 {
     margin-bottom: 10px;
 }
 
+.notifications-area-hold {
+    margin-right: 30px;
+}
+
 .notification-page-item p {
     margin-bottom: 5px;
+}
+
+.unread-notifications-count, .read-notifications-count {
+    width: 380px;
+    height: 148px;
+    border-radius: 12px;
+    background-color: var(--default-white-color);
+    box-shadow: 8px 8px 48px 8px rgba(0, 0, 0, 0.08);
+}
+
+.notifications-info-area {
+    margin-top: 30px;
+}
+
+.read-notifications-count {
+    margin-bottom: 30px;
+}
+
+.read-notifications-count h3, .unread-notifications-count h3 {
+    margin-bottom: 10px;
+}
+
+.read-notifications-count p, .unread-notifications-count p {
+    font-weight: 700;
 }
