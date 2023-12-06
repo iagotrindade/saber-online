@@ -532,7 +532,6 @@
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -570,7 +569,6 @@
 
 .course-item-area {
     align-items: flex-start;
-    margin-right: 40px;
 }
 
 .course-item-area a {
