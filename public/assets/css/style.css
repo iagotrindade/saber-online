@@ -779,6 +779,10 @@
     margin-top: 30px;
 }
 
+.notification-page-item:hover {
+    opacity: 1 !important;
+}
+
 .notification-page-item h4 {
     margin-bottom: 10px;
 }

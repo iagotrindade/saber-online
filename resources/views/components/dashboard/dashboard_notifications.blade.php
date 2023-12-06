@@ -4,7 +4,7 @@
     <div class="notifications-area default-flex-between">
         <div class="notifications-area-hold">
             @foreach ($user->notifications as $notification)
-                <div class="notification-page-item">
+                <div class="notification-page-item" @if($notification->read_at !== null) style="opacity: 0.5;" @endif>
                     <h4>{{$notification->data['title']}}</h4>
                     <p>{{$notification->data['body']}}</p>
                     <p>{{date('d/m/Y - h:m', strtotime($notification->created_at))}}</p>

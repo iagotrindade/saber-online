@@ -21,6 +21,8 @@ Route::middleware(["auth"])->group(function() {
 
     Route::get('/notifications', [NotificationController::class, 'index'])->name('notifications');
 
+    Route::get('/courses', [CourseController::class, 'index'])->name('courses');
+
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 });

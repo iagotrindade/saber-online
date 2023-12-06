@@ -18,13 +18,13 @@
                 @endif
 
                 @foreach ($user->notifications as $notification)
-                        <div class="notification-item" @if($notification->read_at !== null) style="opacity: 0.5;" @endif>
-                            <a href="{{route('notifications')}}">
-                                <h3>{{$notification->data['title']}}</h3>
-                                <p>{{Str::limit($notification->data['body'], 70, '...')}}</p>
-                                <p class="notification-date">{{date('d/m/Y - h:m', strtotime($notification->created_at))}}</p>
-                            </a>
-                        </div>
+                    <div class="notification-item" @if($notification->read_at !== null) style="opacity: 0.5;" @endif>
+                        <a href="{{route('notifications')}}">
+                            <h3>{{$notification->data['title']}}</h3>
+                            <p>{{Str::limit($notification->data['body'], 70, '...')}}</p>
+                            <p class="notification-date">{{date('d/m/Y - h:m', strtotime($notification->created_at))}}</p>
+                        </a>
+                    </div>
                 @endforeach
             </div>
         </div>
